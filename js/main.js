@@ -1,8 +1,8 @@
-
-
-//pie chart
 var drawChart = (langsDict) => {
-
+    /*
+        This methods first structures the data it gets in the form {y: percent, label: language}.
+        Then draw the pie chart usign the library Canvas.JS
+    */
     dataToChart = []
     const sum = Object.values(langsDict).reduce((a, b) => a + b, 0);
     for (var key of Object.keys(langsDict)) {
@@ -28,11 +28,17 @@ var drawChart = (langsDict) => {
 }
 
 
-
-
-
-
 $(document).ready(function() {
+    /*
+        When the form is submitted, a post request is sent to the server with the username extracted
+        from the form. 
+
+        Divs(loading, error..etc) are shown and hidden when they are supposed to.
+        
+        Data received from the response of the post request is passed to the drawChart function 
+        to draw the graph
+    */
+   
     $('form').on('submit', function(event){  
         $(".chartContainer").hide();  
         $(".loader").show();
@@ -56,8 +62,7 @@ $(document).ready(function() {
                 $(".chartContainer").show();
                 $('#search').val('')
                 drawChart(JSON.parse(data))
-            }
-            
+            }        
         });
         
         event.preventDefault();

@@ -599,7 +599,6 @@ legend {
 }
 
 
-
 #twitterLogo {
 
   margin-top:50px;
@@ -615,7 +614,6 @@ legend {
 }
 
 #loader {
-    /* position: fixed; */
     margin: 0 auto;
     width: 50%;
     height: 300px;
@@ -625,14 +623,11 @@ legend {
 }
 
 
-
 #errorOccured{
   margin: 0 auto;
   display: none;
   width:50%;
   text-align: center;
-  /* background-color: red; */
-  /* color:white; */
   background-color: #fce4e4;
   border: 1px solid #fcc2c3;
 }
