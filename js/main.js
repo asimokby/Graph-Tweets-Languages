@@ -13,7 +13,7 @@ var drawChart = (langsDict) => {
     var chart = new CanvasJS.Chart("chartContainer", {
         animationEnabled: true,
         title: {
-            text: `Languages Percentages - ${sum} Recent Tweets`
+            text: `Languages Percentages - Considering ${sum} Recent Proper Tweets`
         },
         data: [{
             type: "pie",
