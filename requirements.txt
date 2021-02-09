@@ -36,7 +36,7 @@ requests==2.24.0
 schedule==0.6.0
 six==1.15.0
 soupsieve==2.0.1
-twint==2.1.16
+-e git+https://github.com/twintproject/twint.git@4b30fa33991ccdf89c77471382daad3d3bc8c988#egg=twint
 typing-extensions==3.7.4.2
 urllib3==1.25.10
 Werkzeug==1.0.1
