@@ -1,4 +1,5 @@
-import fasttext as ft
+# import fastText as ft
+from fasttext import load_model
 from crawlTweets import CrawlTweets
 import emoji
 
@@ -6,10 +7,10 @@ class LangIdentifier():
     def __init__(self, username):
         self.username = username
         self.langs = {}
-        crawlObj = CrawlTweets(self.username, 200)
+        crawlObj = CrawlTweets(self.username, 250)
         self.textTweets = crawlObj.getTweets()
     def loadModel(self):
-        return ft.load_model("lid.176.ftz") 
+        return load_model("flaskApp/lid.176.ftz") 
 
     def detectLang(self, text):
         return self.lid_model.predict(text)
