@@ -47,8 +47,8 @@ $(document).ready(function() {
             data: JSON.stringify({ 'username': $('#search').val() }),
             type : 'POST',
             contentType: "application/json",
-            url: 'http://127.0.0.1:5000/process',
-            // url: 'https://graphlangs.herokuapp.com/process',
+            // url: 'http://127.0.0.1:5000/process',
+            url: 'https://graphlangs.herokuapp.com/process',
             error: function (XMLHttpRequest, textStatus, errorThrown){
                 $(".errorOccured").show();
                 $(".loader").hide();
