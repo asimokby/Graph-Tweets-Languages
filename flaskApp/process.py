@@ -9,6 +9,7 @@ CORS(app)
 
 @app.route('/process', methods=['GET','POST'])  
 def process(): 
+    print('This is a test')
     if request.method == 'GET':
         return '<p>You lost? -_- Go back to the website from <a href="https://asimokby.github.io/Graph-Tweets-Languages/">here!</a><p>'
     # username = json.loads(request.data)['username']
